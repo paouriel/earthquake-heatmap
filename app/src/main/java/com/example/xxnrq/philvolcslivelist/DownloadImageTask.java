@@ -40,5 +40,6 @@ class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
 
     protected void onPostExecute(Bitmap result) {
         bmImage.setImageBitmap(result);
+//        Glide.with(context).load(result).into(bmImage);
     }
 }

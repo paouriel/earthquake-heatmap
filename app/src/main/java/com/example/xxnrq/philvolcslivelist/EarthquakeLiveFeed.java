@@ -138,6 +138,7 @@ public class EarthquakeLiveFeed extends AsyncTask<Void, Void, Void> {
         } catch (IOException e) {
             Toast.makeText(context, "Error AsyncTask", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
+            Looper.prepare();
         }
         Looper.prepare();
         return null;

@@ -52,7 +52,7 @@ public class ListAdapter extends ArrayAdapter<ArrayList<String>> {
 
             if (mapImage != null) {
                 String staticImg = "http://maps.googleapis.com/maps/api/staticmap?&size=400x400&center=" + innerElements.get(1) + "," + innerElements.get(2) + "&zoom=6&" +
-                        "maptype=roadmap&markers=size:large%7Ccolor:red%7C" + innerElements.get(1) + "," + innerElements.get(2);
+                        "maptype=roadmap&markers=size:large%7Ccolor:red%7C" + innerElements.get(1) + "," + innerElements.get(2) + "&key=" + context.getString(R.string.google_maps_key);
                 new DownloadImageTask(mapImage, context).execute(staticImg);
             }
 
